@@ -58,7 +58,16 @@ import re
 from collections import defaultdict
 
 print = sys.stdout.write
-fin = open("data.csv", "r", encoding="utf-8")
+input = sys.stdin.readline
+
+N, file_name = map(str, input().rstrip().split())
+N = int(N)
+try:
+    fin = open(file_name, "r", encoding="utf-8")
+except FileNotFoundError:
+    print(f"{file_name} not found!\n")
+    sys.exit(0)
+
 csv_fin = csv.reader(fin)
 data = []
 user_dict = defaultdict(int)
@@ -84,9 +93,19 @@ fin.close()
 
 \newpage
 
-## Data
+## Data and Input
+
+### Data
 
 - [KakaoTalk_Chat\_\_\_\_\_\_\_\_\_\_\_\_2023-10-04-17-06-34.csv](https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fllui864osim11d%2Fa26231d35f8801fe90835532bab37aa4b614caffbdbfc21faf1d83e534860f73%2FKakaoTalk_Chat____________2023-10-04-17-06-34.csv)
+
+### Input
+
+`input.txt`:
+
+```txt
+4 data.csv
+```
 
 \newpage
 
@@ -94,12 +113,12 @@ fin.close()
 
 ### How to Execute
 
-`data.csv`([KakaoTalk_Chat\_\_\_\_\_\_\_\_\_\_\_\_2023-10-04-17-06-34.csv](https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fllui864osim11d%2Fa26231d35f8801fe90835532bab37aa4b614caffbdbfc21faf1d83e534860f73%2FKakaoTalk_Chat____________2023-10-04-17-06-34.csv)) 파일을 python file과 디렉토리에 위치시킨 후, 하기 명령어를 실행합니다.
+`data.csv`([KakaoTalk_Chat\_\_\_\_\_\_\_\_\_\_\_\_2023-10-04-17-06-34.csv](https://piazza.com/redirect/s3?bucket=uploads&prefix=paste%2Fllui864osim11d%2Fa26231d35f8801fe90835532bab37aa4b614caffbdbfc21faf1d83e534860f73%2FKakaoTalk_Chat____________2023-10-04-17-06-34.csv)) 파일과 `input.txt` file을 python file과 디렉토리에 위치시킨 후, 하기 명령어를 실행합니다.
 
 ### Program Execution Command
 
 ```zsh
-python3 main.py
+python3 main.py < input.txt
 ```
 
 실행 결과는 하기와 같습니다.
@@ -111,14 +130,14 @@ python3 main.py
 
 ### Program Execution ScreenShot
 
-![Program Execution ScreenShot](image.png)
+![Program Execution ScreenShot](image-2.png)
 
 ### How to Measure Program Execution Time
 
 `/usr/bin/time` binary를 이용하여 실행 시간을 측정합니다.
 
 ```zsh
-/usr/bin/time python3 main.py
+/usr/bin/time python3 main.py < input.txt
 ```
 
 실행 결과는 하기와 같습니다.
@@ -126,12 +145,12 @@ python3 main.py
 ```zsh
 20 오승준
 8.57%
-0.00user 0.01system 0:00.02elapsed 96%CPU (0avgtext+0avgdata 11080maxresident)k
-0inputs+0outputs (0major+1266minor)pagefaults 0swaps
+0.07user 0.00system 0:00.06elapsed 121%CPU (0avgtext+0avgdata 10748maxresident)k
+0inputs+0outputs (0major+16726minor)pagefaults 0swaps
 ```
 
-약 $0:00.02$가 소요되었습니다.
+약 $0:00.06$가 소요되었습니다.
 
 ### Measured Program Execution Time ScreenShot
 
-![Measured Program Execution Time ScreenShot](image-1.png)
+![Measured Program Execution Time ScreenShot](image-3.png)

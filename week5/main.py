@@ -5,7 +5,16 @@ import re
 from collections import defaultdict
 
 print = sys.stdout.write
-fin = open("data.csv", "r", encoding="utf-8")
+input = sys.stdin.readline
+
+N, file_name = map(str, input().rstrip().split())
+N = int(N)
+try:
+    fin = open(file_name, "r", encoding="utf-8")
+except FileNotFoundError:
+    print(f"{file_name} not found!\n")
+    sys.exit(0)
+
 csv_fin = csv.reader(fin)
 data = []
 user_dict = defaultdict(int)
