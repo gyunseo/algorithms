@@ -130,10 +130,42 @@ fin.close()
 
 \newpage
 
+## Inputs
+
+```
+남
+체중감량
+```
+
+```
+남
+근육증가
+```
+
+```
+남
+건강유지
+```
+
+```
+여
+체중감량
+```
+
+```
+여
+근육증가
+```
+
+```
+여
+건강유지
+```
+
 ## How to Run
 
 ```zsh
-chmod u+x test_scipt.sh
+chmod 777 test_scipt.sh
 ./test_script.sh
 ```
 
@@ -143,4 +175,4 @@ chmod u+x test_scipt.sh
 
 ![Alt text](image.png)
 
-`input{i}.txt`와 `output{i}.txt`에서 확인 가능합니다.
+`output{i}.txt`에서 확인 가능합니다.

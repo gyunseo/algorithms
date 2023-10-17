@@ -72,7 +72,7 @@ elif user_goal == 2:
             iteration_trigger = False
             continue
 
-    유산소_근력_운동_조합 = random.choice(list(combinations_with_replacement(유산소, 1))) + 근력_운동_조합_다른_부위
+    유산소_근력_운동_조합 = random.choice(list(combinations_with_replacement(유산소, 2))) + 근력_운동_조합_다른_부위
     유산소_근력_운동_조합_순열 = list(permutations(유산소_근력_운동_조합))
     to_be_printed = random.choice(유산소_근력_운동_조합_순열)
     for i, exercise in enumerate(to_be_printed):

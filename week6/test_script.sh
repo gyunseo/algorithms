@@ -1,7 +1,7 @@
 #!/usr/bin/zsh
 
 # 반복문을 사용하여 여러 입력 파일 실행
-for ((i=0; i<=6; i++))
+for ((i=0; i<6; i++))
 do
     input_file="input${i}.txt"
     output_file="output${i}.txt"
