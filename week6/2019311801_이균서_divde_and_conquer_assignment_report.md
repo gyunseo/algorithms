@@ -1,17 +1,63 @@
-# Copyright 2023 gyunseo
-# 
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-# 
-#     http://www.apache.org/licenses/LICENSE-2.0
-# 
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+<!--
+ Copyright 2023 gyunseo
 
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+
+# Divide and Conquer Assignment Report
+
+### 2019311801 이균서
+
+## Execution Environment
+
+### OS
+
+Distributor ID: Ubuntu  
+Description: Ubuntu 22.04.3 LTS  
+Release: 22.04  
+Codename: jammy
+
+### Python3 Runtime and Pipfile (pipenv)
+
+Runtime Version: Python 3.11.6  
+package manager and virtual environment: pipenv
+
+package dependencies가 없는 것을 확실히 하기 위해 pipenv를 사용했습니다.
+
+하기 `Pipfile`에 명시된 대로, denpendencies는 없습니다.
+
+```
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
+python_full_version = "3.11.6"
+```
+
+즉, 추가로 설치한 패키지는 없습니다.
+
+\newpage
+
+## Program Source Code
+
+```python
 import sys, csv, random
 from itertools import combinations, permutations, product, combinations_with_replacement
 input = sys.stdin.readline
@@ -80,3 +126,21 @@ elif user_goal == 2:
         print(f"{exercise[2] if user_sex == 0 else exercise[3]}\n\n")
 
 fin.close()
+```
+
+\newpage
+
+## How to Run
+
+```zsh
+chmod u+x test_scipt.sh
+./test_script.sh
+```
+
+\newpage
+
+## Program Execution Result
+
+![Alt text](image.png)
+
+`input{i}.txt`와 `output{i}.txt`에서 확인 가능합니다.
